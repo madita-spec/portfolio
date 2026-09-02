@@ -54,7 +54,7 @@ export const CaseStudyModal = ({ selectedProject, onClose }) => {
               <Sparkles size={16} color="var(--primary)" />
               <span>Executive Summary</span>
             </h4>
-            <p style={{ color: 'var(--muted)', lineHeight: 1.65, margin: 0 }}>
+            <p style={{ color: 'var(--text-secondary)', lineHeight: 1.72, margin: 0 }}>
               {selectedProject.summary}
             </p>
           </div>
@@ -66,7 +66,7 @@ export const CaseStudyModal = ({ selectedProject, onClose }) => {
                 <Target size={16} color="var(--primary)" />
                 <span>The Challenge</span>
               </h4>
-              <p style={{ color: 'var(--muted)', lineHeight: 1.65, margin: 0 }}>
+              <p style={{ color: 'var(--text-secondary)', lineHeight: 1.72, margin: 0 }}>
                 {selectedProject.challenge}
               </p>
             </div>
@@ -79,7 +79,7 @@ export const CaseStudyModal = ({ selectedProject, onClose }) => {
                 <Layers size={16} color="var(--primary)" />
                 <span>The Strategic Solution</span>
               </h4>
-              <p style={{ color: 'var(--muted)', lineHeight: 1.65, margin: 0 }}>
+              <p style={{ color: 'var(--text-secondary)', lineHeight: 1.72, margin: 0 }}>
                 {selectedProject.solution}
               </p>
             </div>
@@ -112,7 +112,7 @@ export const CaseStudyModal = ({ selectedProject, onClose }) => {
               </h4>
               <ul className="card-highlights" style={{ border: 'none', paddingTop: 0 }}>
                 {selectedProject.results.map((res, idx) => (
-                  <li key={idx} style={{ fontSize: '0.92rem', color: 'var(--text-secondary)' }}>
+                  <li key={idx} style={{ fontSize: '0.94rem', color: 'var(--text-secondary)' }}>
                     {res}
                   </li>
                 ))}

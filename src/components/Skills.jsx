@@ -1,17 +1,21 @@
 import React from 'react';
+import { Award } from 'lucide-react';
 
 export const Skills = ({ skills }) => {
   return (
     <section id="skills" className="section muted-section">
       <div className="container">
-        <div className="section-heading">
-          <p className="section-tag">Skills & Tools</p>
+        <div className="section-heading reveal-on-scroll">
+          <p className="section-tag">
+            <Award size={13} />
+            <span>Skills & Tools</span>
+          </p>
           <h2>My expertise across platforms</h2>
         </div>
 
         <div className="process-grid">
-          {skills.map((skill) => (
-            <div key={skill.id} className="process-step">
+          {skills.map((skill, idx) => (
+            <div key={skill.id} className={`process-step reveal-on-scroll stagger-${idx + 1}`}>
               <span>{skill.icon}</span>
               <h3>{skill.title}</h3>
               <p>{skill.description}</p>

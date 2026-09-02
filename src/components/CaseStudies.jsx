@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, TrendingUp } from 'lucide-react';
+import { ArrowUpRight, TrendingUp, Briefcase } from 'lucide-react';
 
 const categories = ['All', 'Auto / Mobility', 'FMCG / TikTok', 'Lifestyle & Beverage'];
 
@@ -14,13 +14,16 @@ export const CaseStudies = ({ projects, onSelectProject }) => {
   return (
     <section id="work" className="section">
       <div className="container">
-        <div className="section-heading">
-          <p className="section-tag">Case Studies</p>
+        <div className="section-heading reveal-on-scroll">
+          <p className="section-tag">
+            <Briefcase size={13} />
+            <span>Case Studies</span>
+          </p>
           <h2>Featured brand strategies</h2>
         </div>
 
         {/* Category Filters */}
-        <div className="category-filter">
+        <div className="category-filter reveal-on-scroll stagger-1">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -34,10 +37,10 @@ export const CaseStudies = ({ projects, onSelectProject }) => {
 
         {/* Case Studies Grid */}
         <div className="work-grid">
-          {filteredProjects.map((project) => (
+          {filteredProjects.map((project, idx) => (
             <article
               key={project.id}
-              className="case-study"
+              className={`case-study reveal-on-scroll stagger-${(idx % 3) + 1}`}
               onClick={() => onSelectProject(project)}
             >
               <div>
